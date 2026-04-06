@@ -98,7 +98,7 @@ const Categories = () => {
       </div>
      </div>
 
-        
+        \
             
 
             </section>

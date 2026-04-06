@@ -1,7 +1,7 @@
 import { Headset, BadgeDollarSign, Laptop } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { addToCart } from "../utils/cart";
-
+import { motion } from "framer-motion";
 const Products = () => {
   const navigate = useNavigate();
 
@@ -101,7 +101,12 @@ const Products = () => {
   return (
     <div className="container mx-auto px-4 py-8 bg-[#111] min-h-screen">
       {/* Heading */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20">
+      < motion.section animate={{ y: [0, -20, 0] }}
+  transition={{
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20">
         <div className="text-center mb-14">
           <p className="text-[#39ff14] font-semibold tracking-[4px] text-sm uppercase">
             Product
@@ -158,7 +163,7 @@ const Products = () => {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Features */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

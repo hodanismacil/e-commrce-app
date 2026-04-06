@@ -7,6 +7,9 @@ import Products from "../products/product- Details";
 import Categories from "../catogorys/cotogors";
 import Contact from "../contacts/contacs";
 import Carts from "../carts/carts";
+import Footer from "../footer/footer";
+import Login from "../login/login";
+
 
 
 const Router = () => {
@@ -14,6 +17,7 @@ const Router = () => {
     <div>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
@@ -44,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path:"/Carts",
         element:<Carts/>
+      },
+      {
+        path:"/login",
+        element:<Login/>
       }
     ],
   },

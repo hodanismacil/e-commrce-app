@@ -1,4 +1,5 @@
 import { ShieldCheck, BadgeDollarSign, Laptop, Headset } from "lucide-react";
+import{motion} from "framer-motion";
     
     const Home = () => {
   return (
@@ -43,9 +44,14 @@ import { ShieldCheck, BadgeDollarSign, Laptop, Headset } from "lucide-react";
         <div className="flex items-center justify-center gap- w-full min-h-[400px]">
           <section>
         {/* BIG TEXT */}
-  <h2 className="text-[90px] md:text-[140px] font-black text-[#1DB954] opacity-80 rotate-90 select-none">
+  <motion.h2 animate={{ y: [0, -20, 0] }}
+  transition={{
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }} className="text-[90px] md:text-[140px] font-black text-[#1DB954] opacity-80 rotate-90 select-none">
     G502
-  </h2>
+  </motion.h2>
     </section>
   {/* PRODUCT IMAGE */}
   <img
@@ -186,7 +192,12 @@ import { ShieldCheck, BadgeDollarSign, Laptop, Headset } from "lucide-react";
       </section>
 
 
-      <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 flex gap-5">
+      <motion.section animate={{ y: [0, -20, 0] }}
+  transition={{
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }} className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-20 flex gap-5">
       
         <div className="bg-[#1a1a1a] rounded-2xl p-6 hover:scale-105 transition duration-300 shadow-lg">
   <img
@@ -235,10 +246,61 @@ import { ShieldCheck, BadgeDollarSign, Laptop, Headset } from "lucide-react";
   </button>
 </div>
 
-      </section>
+      </motion.section>
+
+     
+     <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-16 text-center">
+            <p className="text-[#39FF14] font-semibold tracking-widest text-sm">
+                EXPLORE OUR CATEGORIES
+            </p>
+            <h1 className="text-3xl md:text-4xl font-bold mt-3">
+                Find the perfect devices for gaming, creative work, and everyday office use.
+            </h1>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+                Explore our premium collection of gaming, office, and design gear
+                made for performance and style.
+            </p>   
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div className="bg-[#1a1a1a] rounded-2xl p-6 hover:scale-105 transition duration-300">
+            <div className="bg-[#2a2a2a]  rounded-2xl w-full flex items-center justify-center relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=1152&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gaming" className=" relative  z-10 w-[170] h-[150] object-contain drop-shadow--[0_0_20px_rgba(29,185,84,0.35)]" />
+            </div>
+          <h1 className="text-xl font-bold text-white mt-4">Graphic Design</h1>
+          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+            Creative tools and premium laptops designed for editing and design work.
+          </p>
+
+      </div>
+      <div className="bg-[#1a1a1a] rounded-2xl p-6 hover:scale-105 transition duration-300">
+            <div className="bg-[#2a2a2a]  rounded-2xl w-full flex items-center justify-center relative overflow-hidden">
+              <img src="https://media.istockphoto.com/id/1188848418/photo/responsive-design-ux-website.jpg?s=2048x2048&w=is&k=20&c=Y4W_am47LitzMtx4Txwjnc8duwmuwBbEuU9xUJpCh28=" alt="Gaming" className=" relative  z-10 w-[170] h-[150] object-contain drop-shadow--[0_0_20px_rgba(29,185,84,0.35)]" />
+            </div>
+          <h1 className="text-xl font-bold text-white mt-4">Graphic Design</h1>
+          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+            Creative tools and premium laptops designed for editing and design work.
+          </p>
+
+      </div>
+      <div className="bg-[#1a1a1a] rounded-2xl p-6 hover:scale-105 transition duration-300">
+            <div className="bg-[#2a2a2a]  rounded-2xl w-full flex items-center justify-center relative overflow-hidden">
+              <img src="https://media.istockphoto.com/id/1483748248/photo/digital-wireframe-design-for-web-or-mobile-app-ui-on-laptop-scrutinize.jpg?s=2048x2048&w=is&k=20&c=-UaAuYRNEkFR46nB9duJlrYVwWAI9gH-KpLrSBKN6uA=" alt="Gaming" className=" relative  z-10 w-[170] h-[150] object-contain drop-shadow--[0_0_20px_rgba(29,185,84,0.35)]" />
+            </div>
+          <h1 className="text-xl font-bold text-white mt-4">Graphic Design</h1>
+          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+            Creative tools and premium laptops designed for editing and design work.
+          </p>
 
 
+      </div>
+     </div>
+
+        \
+            
+
+            </section>
     </div>
+
   );
 };
 
