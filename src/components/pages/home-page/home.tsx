@@ -1,74 +1,67 @@
 import { ShieldCheck, BadgeDollarSign, Laptop, Headset } from "lucide-react";
 import{motion} from "framer-motion";
-    
+import Horesawir from "/src/assets/Horesawir.png";
     const Home = () => {
   return (
     <div className="min-h-screen bg-[#111] text-white font-sans">
-      
-   
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 md:px-12 lg:px-20 py-20">
-        
-       
-        <div className="z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight leading-tight">
-            G502 HERO WIRELESS
-          </h1>
 
-          <h2 className="text-lg md:text-xl text-gray-400 mb-6 font-medium">
-            Logitech's High Performance Wireless Gaming Mouse
-          </h2>
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6 md:px-12 lg:px-20 py-20">
 
-          <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-md">
-            The Razer Ouroboros is outfitted with the most advanced &
-            configurable sensor yet, the all-new 8200dpi 4G laser sensor.
-            It tracks so precisely, you always hit targets exactly where
-            you need to.
-          </p>
+  {/* LEFT */}
+  <div className="z-10 order-2 md:order-1">
+    <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-3 tracking-tighter leading-tight italic">
+      G502 HERO WIRELESS
+    </h1>
 
-          <div className="text-[#39FF14] text-2xl font-bold mb-6">
-            USD 99.99
-          </div>
+    <h2 className="text-lg md:text-xl text-gray-400 mb-6 font-medium">
+      Logitech's High Performance Wireless Gaming Mouse
+    </h2>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-[#1DB954] hover:bg-[#1ed760] text-black font-bold py-3 px-8 rounded-sm flex items-center gap-2 transition-all">
-              <span>🛒</span> ADD TO CART
-            </button>
+    <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-md">
+      The G502 HERO features an advanced optical sensor for maximum tracking accuracy, 
+      customizable RGB lighting, and custom game profiles to give you the ultimate edge.
+    </p>
 
-            <button className="border border-gray-600 hover:border-white py-3 px-8 rounded-sm transition-all">
-              MORE DETAILS
-            </button>
-          </div>
-        </div>
+    <div className="text-[#39FF14] text-3xl font-bold mb-6">
+      USD 99.99
+    </div>
 
-        {/* RIGHT SIDE */}
-        <div className="flex items-center justify-center gap- w-full min-h-[400px]">
-          <section>
-        {/* BIG TEXT */}
-  <motion.h2 animate={{ y: [0, -20, 0] }}
-  transition={{
-    duration: 3,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }} className="text-[90px] md:text-[140px] font-black text-[#1DB954] opacity-80 rotate-90 select-none">
-    G502
-  </motion.h2>
-    </section>
-  {/* PRODUCT IMAGE */}
-  <img
-    src="https://media.istockphoto.com/id/1248263998/photo/isolated-high-tech-open-laptop-with-abstract-vibrant-color-screen-on-a-dark-background.jpg?s=2048x2048&w=is&k=20&c=G0hEy5x2echFe_CwiyQzJr6SGBO3g0uIWX0UYyNwB1Q="
-    alt="Logitech G502"
-    className="w-[280px] md:w-[380px] h-auto z-10 rounded-xl drop-shadow[0_35px_35px_rgba(29,185,84,0.3)] hover:scale-105 transition duration-300  relative"
-  />
+    <div className="flex flex-wrap gap-4">
+      <button className="bg-[#1DB954] hover:bg-[#1ed760] text-black font-bold py-3 px-8 rounded-sm flex items-center gap-2 transition-all active:scale-95">
+        <span>🛒</span> ADD TO CART
+      </button>
+
+      <button className="border border-gray-600 hover:border-white py-3 px-8 rounded-sm transition-all text-gray-300 hover:text-white">
+        MORE DETAILS
+      </button>
+    </div>
+  </div>
+
+  {/* RIGHT */}
+  <div className="relative flex items-center justify-center w-full min-h-[350px] order-1 md:order-2 overflow-hidden">
+
+    {/* BACKGROUND TEXT (gadaal) */}
+  
+    {/* IMAGE (hore) */}
+    <motion.img
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      src={Horesawir}   // ✅ sax
+      alt="Gaming Mouse"
+      className="relative z-10 w-[260px] md:w-[380px] max-w-full h-auto object-contain drop-shadow-[0_35px_35px_rgba(29,185,84,0.3)] hover:scale-105 transition duration-500"
+    />
+  </div>
+    <motion.h2
+      animate={{ y: [0, -20, 0] }}
+      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      className="absolute inset-0 flex items-center justify-center text-[90px] md:text-[150px] font-black text-[#1DB954] opacity-10 rotate-90 pointer-events-none z-0"
+    >
+      G502
+    </motion.h2>
 
 
 </div>
-
-      </div>
-
-
-    
-
-
       {/* PRODUCTS SECTION */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 py-16 text-center">
         <p className="text-[#39FF14] font-semibold tracking-widest text-sm">
